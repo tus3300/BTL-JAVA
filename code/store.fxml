@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="10" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text="Cửa hàng của chúng tôi" />
+    <HBox>
+        <Label text="Sản phẩm:" />
+        <ChoiceBox fx:id="productChoiceBox">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String>Áo sơ mi</String>
+                    <String>Quần jean</String>
+                    <String>Giày thể thao</String>
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <Button text="Thêm vào giỏ hàng" onAction="#addToCart" />
+    </HBox>
+    <ListView fx:id="cartListView" />
+</VBox>
